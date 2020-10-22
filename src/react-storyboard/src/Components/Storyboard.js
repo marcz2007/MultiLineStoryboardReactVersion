@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
-import Sentence from './Sentence'
-import TopField from "./TopField";
-// import TextField from "./TextField";
-import {Link, Router} from 'react-router-dom'
-import {useParams} from "react-router";
+
 
 const Item = ({handleSubmit, value, select}) => {
 
@@ -47,14 +43,16 @@ class Storyboard extends Component {
             },
         }
 
-
         this.handleSubmit = this.handleSubmit.bind(this)
-
-
     }
 
     select = (position) => {
-        this.setState({currentNode: this.state.currentNode[position]})
+        console.log('select position : ' , position);
+        console.log('before part of state selected: ',this.state.currentNode);
+        this.setState({currentNode: this.state.currentNode[position]},
+            ()=>{
+                console.log('after part of state selected: ',this.state.currentNode);
+            });
 
     }
 
@@ -92,7 +90,7 @@ class Storyboard extends Component {
         }
 
         console.log(currentNode)
-        //const dag = this.state;
+
         this.setState({currentNode: currentNode},
             () => {this.select('centreField')});
 
