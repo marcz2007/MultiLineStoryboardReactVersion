@@ -2,7 +2,7 @@
 # Task:
 To create a web application which allows users to enter multiple child sentences of a root sentence and then be able to follow the children along in order to create a storyboard. Made using React.
 
-# Purpose: 
+## Purpose: 
 To improve skills in React with emphasis on handling the state appropriately.
 
 ## How to setup: 
